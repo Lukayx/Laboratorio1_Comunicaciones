@@ -10,7 +10,7 @@ def main():
         tipo_senal = "AC"
 
     datos = generar_senal(tipo=tipo_senal)
-    # graficar_proceso(datos)
+    graficar_proceso(datos, "SeñalEnviada.png", "Señal Digital Enviada")
 
     paquetes = dividir_en_paquetes(datos["binaria"], datos["tiempo"])
     print(f"\n[INFO] Total de paquetes generados: {len(paquetes)}")

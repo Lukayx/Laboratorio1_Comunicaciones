@@ -28,4 +28,4 @@ paquetes = mostrar_y_desempaquetar(paquetes_encapsulados)
 bits = reconstruir_bits(paquetes)
 
 # Graficar
-graficar_proceso(bits)
+graficar_proceso(bits, "SeñalRecibida.png", "Señal Digital Recibida")

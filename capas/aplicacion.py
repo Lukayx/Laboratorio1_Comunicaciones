@@ -52,7 +52,7 @@ def generar_senal(tipo='AC'):
         "descripcion": descripcion
     }
 
-def graficar_proceso(datos):
+def graficar_proceso(datos, nombreArchivo="senal.png", titulo="Señal Digital"):
     # Si los datos vienen como diccionario con tiempo, los usamos
     if isinstance(datos, dict): 
         if "tiempo" in datos:
@@ -65,10 +65,13 @@ def graficar_proceso(datos):
             print("perro")
         plt.figure(figsize=(12, 3))
         plt.step(tiempo, binaria, where="post")
-        plt.title("Señal Digital Reconstruida")
+        plt.title(titulo)
         plt.xlabel("Tiempo")
         plt.ylabel("Nivel de Señal")
         plt.grid(True)
         plt.ylim(-0.5, 1.5)
         plt.tight_layout()
-        plt.show()
+        # plt.show()
+        plt.savefig(nombreArchivo)
+print("[✅] Gráfico guardado como salida_receptor.png")
+
